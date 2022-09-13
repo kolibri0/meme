@@ -40,3 +40,29 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+// genres: Genre = {
+  //   name: 'All',
+  //   completed: false,
+  //   color: 'primary',
+  //   value: 'All',
+  //   subtasks: [
+  //     {name: 'Dark', value: 'Dark', completed: false, color: 'primary'},
+  //     {name: 'Programming', value: 'Programming', completed: false, color: 'primary'},
+  //     {name: 'Christmas', value: 'Christmas', completed: false, color: 'primary'},
+  //     {name: 'Pun', value: 'Pun', completed: false, color: 'primary'},
+  //     {name: 'Spooky', value: 'Spooky', completed: false, color: 'primary'},
+  //     {name: 'Miscellaneous', value: 'Miscellaneous', completed: false, color: 'primary'},
+  //   ]
+  // }
+
+  // genres: Array<any> = [
+  //   {name: 'Any', value: 'Any'},
+  //   {name: 'Dark', value: 'Dark'},
+  //   {name: 'Programming', value: 'Programming'},
+  //   {name: 'Christmas', value: 'Christmas'},
+  //   {name: 'Pun', value: 'Pun'},
+  //   {name: 'Spooky', value: 'Spooky'},
+  //   {name: 'Miscellaneous', value: 'Miscellaneous'},
+    
+  // ]
