@@ -6,12 +6,20 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './material/material.module';
-import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HeaderComponent } from './components/header/header.component';
+import { JokesComponent } from './components/jokes/jokes.component';
+import { NotfoundComponent } from './components/notfound/notfound.component';
+import { MemesComponent } from './components/memes/memes.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
+    JokesComponent,
+    NotfoundComponent,
+    MemesComponent,
   ],
   imports: [
     BrowserModule,

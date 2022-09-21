@@ -1,0 +1,33 @@
+.card{
+    width: 800px;
+    margin: 30px auto 0;
+    .checkbox-item{
+        margin-right: 10px;
+    }
+    .message{
+        text-align: center;
+        font-size: 16px;
+        color: #3f51b5;
+    }
+    .count{
+        display: block;
+        margin: 0 auto 15px;
+        width: 100px;
+    }
+    .btn-card{
+        display: block;
+        margin: 0 auto;
+    }
+    
+}
+.joke{
+    width: 830px;
+    margin: 20px auto 10px;
+    .item{
+        margin-bottom: 10px;
+    }
+}
+.btn-hide{
+    display: block;
+    margin: 10px auto 0;
+}

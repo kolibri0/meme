@@ -9,6 +9,8 @@ import {MatIconModule} from '@angular/material/icon'
 import {MatToolbarModule} from '@angular/material/toolbar'
 import {MatListModule} from '@angular/material/list'
 import {MatRadioModule} from '@angular/material/radio'
+import {MatCardModule} from '@angular/material/card'
+import {MatExpansionModule} from '@angular/material/expansion'
 
 const Materials = [
   MatButtonModule,
@@ -21,6 +23,8 @@ const Materials = [
   MatToolbarModule,
   MatListModule,
   MatRadioModule,
+  MatCardModule,
+  MatExpansionModule,
 ]
 
 @NgModule({

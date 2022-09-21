@@ -1,0 +1,56 @@
+<mat-card class="card">
+    <mat-card-title align="center">Joke generator</mat-card-title>
+    <mat-card-content align="center">
+        <mat-checkbox class="checkbox-item" [(ngModel)]="any.selected" [disabled]="disabled">{{any.name}}</mat-checkbox>
+        <mat-checkbox class="checkbox-item" *ngFor="let genre of genres" [value]="genre.name" [(ngModel)]="genre.selected"
+         [disabled]="any.selected" (change)="changeGenre()">
+        {{genre.name}}
+        </mat-checkbox>
+    </mat-card-content>
+    
+    <p class="message">Maximum 10 jokes at a time</p>
+    <input class="count" type="number" min="1" max="10" [(ngModel)]="counterJoke">
+    <button class="btn-card" mat-raised-button color="primary" (click)="generate()">generate</button>
+</mat-card>
+
+<div class="joke" *ngIf="joke && hideJoke">
+    <mat-expansion-panel (opened)="open = true"
+                       (closed)="open = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <p>{{joke.setup}}</p>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <p>{{joke.delivery}}</p>
+  </mat-expansion-panel>
+</div>
+<button class="btn-hide" 
+mat-raised-button color="primary" 
+*ngIf="joke" 
+(click)="hide()"
+>
+{{hideJoke? 'Hide': 'Show'}} one
+</button>
+
+
+<div class="joke" *ngIf="jokes && hideJokes">
+  <mat-expansion-panel 
+  class="item"
+  *ngFor="let joke of jokes.jokes"
+  (opened)="open = true"
+  (closed)="open = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <p>{{joke.setup}}</p>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+  <p>{{joke.delivery}}</p>
+</mat-expansion-panel>
+</div>
+<button class="btn-hide" 
+mat-raised-button color="primary" 
+*ngIf="jokes" 
+(click)="hideMore()"
+>
+{{hideJokes? 'Hide': 'Show'}} {{jokes.amount}} jokes
+</button>
