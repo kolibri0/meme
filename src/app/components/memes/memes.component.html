@@ -1,1 +1,50 @@
-<p>memes works!</p>
+<mat-card class="card">
+
+    <h1 class="h">Meme generator</h1>
+    <div class="slide">
+        <p class="item">All Meme</p>
+        <mat-slide-toggle class="item" [(ngModel)]="checked"></mat-slide-toggle>
+        <p class="item">Find Meme</p>
+    </div>
+
+    <div *ngIf="!checked">
+    <button class="btn-card"  mat-raised-button color="primary" (click)="takeAll()">Take all</button>
+    </div>
+     
+    <div *ngIf="checked">
+        <h3 class="h">Search for a meme by word</h3>
+        <input class="input" type="text" [(ngModel)]="findMeme" placeholder="Enter word">
+        <button class="btn-card" mat-raised-button color="primary" (click)="searchMeme()">Find</button> 
+    </div>
+
+</mat-card>
+
+
+ <div *ngIf="allMeme || foundMeme" #target >
+    <div *ngIf="allMeme && !checked">
+        <div *ngFor="let meme of allMeme | paginate:{ 
+            currentPage: page,
+            totalItems: allMeme.length,
+            itemsPerPage: 5
+            }">
+            <div class="img-item">
+                <img class="img" src="{{meme.example.url}}" alt="">
+            </div>
+        </div>
+        <pagination-controls class="paginator" (click)="scroll(target)" (pageChange)="page = $event"></pagination-controls>
+    </div>
+    <div *ngIf="foundMeme && checked">
+        <div *ngFor="let foundMem of foundMeme | paginate:{ 
+            currentPage: page,
+            totalItems: foundMeme.length,
+            itemsPerPage: 5
+            }">
+            <div class="img-item">
+                <img class="img" src="{{foundMem.url}}" alt="">
+            </div>
+        </div>
+        <pagination-controls class="paginator" (click)="scroll(target)" (pageChange)="page = $event"></pagination-controls>
+    </div>
+    
+
+</div>

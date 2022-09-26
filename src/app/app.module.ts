@@ -11,6 +11,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { JokesComponent } from './components/jokes/jokes.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { MemesComponent } from './components/memes/memes.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { PasswordComponent } from './components/password/password.component';
 
 
 @NgModule({
@@ -20,6 +22,7 @@ import { MemesComponent } from './components/memes/memes.component';
     JokesComponent,
     NotfoundComponent,
     MemesComponent,
+    PasswordComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +32,7 @@ import { MemesComponent } from './components/memes/memes.component';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
+    NgxPaginationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

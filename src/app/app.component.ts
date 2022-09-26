@@ -12,7 +12,7 @@ export class AppComponent {
 
 
   constructor(
-    
+    private http: HttpClient
   ){}
 
 
@@ -20,8 +20,6 @@ export class AppComponent {
 
 
   ngOnInit(){
-    // this.http.get("https://api.memegen.link/templates").subscribe((res) => console.log(res))
     // this.http.get(`https://api.memegen.link/images?filter=black`).subscribe((res) => console.log(res))
-    // this.http.get(`https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw&type=single&amount=10`).subscribe((res) => console.log(res))
   }
 }

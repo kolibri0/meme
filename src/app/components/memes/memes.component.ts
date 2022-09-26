@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MemeService } from 'src/app/services/meme.service';
 
 @Component({
   selector: 'app-memes',
@@ -7,9 +8,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MemesComponent implements OnInit {
 
-  constructor() { }
+  allMeme!: any
+  foundMeme!: any
+
+  findMeme!: string
+
+  page: number = 1
+
+  checked: boolean = false
+
+  constructor(
+    private memeService: MemeService
+  ) { }
 
   ngOnInit(): void {
+    
+  }
+
+
+  takeAll(){
+    if(this.allMeme)return
+    return this.memeService.allMeme().subscribe({
+      next: (res: any) => this.allMeme = res
+    })
+  }
+
+  searchMeme(){
+    this.memeService.findMeme(this.findMeme).subscribe({
+      next: (res: any) => this.foundMeme=res
+    })
+  }
+
+  scroll(el: HTMLElement) {
+    el.scrollIntoView({behavior: 'smooth'});
   }
 
 }

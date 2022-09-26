@@ -11,6 +11,8 @@ import {MatListModule} from '@angular/material/list'
 import {MatRadioModule} from '@angular/material/radio'
 import {MatCardModule} from '@angular/material/card'
 import {MatExpansionModule} from '@angular/material/expansion'
+import {MatPaginatorModule} from '@angular/material/paginator'
+import {MatSlideToggleModule} from '@angular/material/slide-toggle'
 
 const Materials = [
   MatButtonModule,
@@ -25,6 +27,8 @@ const Materials = [
   MatRadioModule,
   MatCardModule,
   MatExpansionModule,
+  MatPaginatorModule,
+  MatSlideToggleModule,
 ]
 
 @NgModule({
