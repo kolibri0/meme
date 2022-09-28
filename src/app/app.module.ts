@@ -13,6 +13,8 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
 import { MemesComponent } from './components/memes/memes.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { PasswordComponent } from './components/password/password.component';
+import { FactsComponent } from './components/facts/facts.component';
+import { ColorComponent } from './components/color/color.component';
 
 
 @NgModule({
@@ -23,6 +25,8 @@ import { PasswordComponent } from './components/password/password.component';
     NotfoundComponent,
     MemesComponent,
     PasswordComponent,
+    FactsComponent,
+    ColorComponent,
   ],
   imports: [
     BrowserModule,

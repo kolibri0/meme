@@ -1,0 +1,12 @@
+<mat-card class="card">
+    <h1>Facts generator</h1>
+    <button mat-raised-button color="primary" (click)="takeFact()">Generate</button>
+</mat-card>
+
+<div *ngIf="fact">
+    <h3 class="fact" *ngIf="fact">{{fact.fact}}</h3>
+</div>
+
+
+
+

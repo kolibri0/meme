@@ -1,0 +1,11 @@
+<mat-card class="card">
+    <h1>Color generator</h1>
+
+    <button mat-raised-button color="primary" (click)="generateColor()">Generate</button>
+
+    <div *ngIf="color">
+        <h2 class="color">{{color}}</h2>
+        <div class="square" [style.background]="color"></div>
+    </div>
+
+</mat-card>

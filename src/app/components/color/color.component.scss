@@ -1,0 +1,17 @@
+.card{
+    width: 600px;
+    margin: 10px auto 20px;
+    text-align: center;
+    .color{
+        margin-top: 10px;
+    }
+    .square{
+        margin: 10px auto 0;
+        width: 500px;
+        height: 500px;
+        border-radius: 10px;
+        text-align: center;
+        align-items: center;
+    }
+}
+
