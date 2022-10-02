@@ -15,6 +15,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { PasswordComponent } from './components/password/password.component';
 import { FactsComponent } from './components/facts/facts.component';
 import { ColorComponent } from './components/color/color.component';
+import { UserComponent } from './components/user/user.component';
+import { InfoComponent } from './components/info/info.component';
 
 
 @NgModule({
@@ -27,6 +29,8 @@ import { ColorComponent } from './components/color/color.component';
     PasswordComponent,
     FactsComponent,
     ColorComponent,
+    UserComponent,
+    InfoComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,35 @@
+.card{
+    text-align: center;
+    width: 600px;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(0,0,0,.17);
+    .type{
+        margin-right: 15px;
+        display: block;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(2, 200px);
+        text-align: start;
+        margin-left: 170px;
+    }
+
+    .btn{
+        margin-top: 10px;
+    }
+}
+
+
+.user-card{
+    margin: 10px auto;
+    width: 300px;
+    text-align: center;
+    .name{
+        font-size: 18px;
+    }
+}
+
+.user-img{
+    height: 150px;
+    border-radius: 5px;
+}

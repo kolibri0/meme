@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Type } from 'src/app/models/genre';
 import { Jokes } from 'src/app/models/joke';
+import { Type } from 'src/app/models/type';
+
 
 
 import { JokeService } from 'src/app/services/joke.service';

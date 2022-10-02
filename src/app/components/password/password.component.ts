@@ -8,7 +8,7 @@ import { Clipboard } from '@angular/cdk/clipboard';
 })
 export class PasswordComponent implements OnInit {
 
-  chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*:=ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   length!: number
   password = ""
 

@@ -4,7 +4,10 @@
     <button mat-raised-button color="primary" (click)="generateColor()">Generate</button>
 
     <div *ngIf="color">
-        <h2 class="color">{{color}}</h2>
+        <div class="color">
+            <h2 class="hex">{{color}}</h2>
+            <h2 class="rgb">rgb({{colorRgb}})</h2>
+        </div>
         <div class="square" [style.background]="color"></div>
     </div>
 

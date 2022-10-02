@@ -1,0 +1,58 @@
+<mat-card class="card">
+    <h1>User info generator</h1>
+    <mat-checkbox class="type" [(ngModel)]="random" disabled="{{custom}}">Random</mat-checkbox>
+    <mat-checkbox class="type" [(ngModel)]="custom" disabled="{{random}}">Custom</mat-checkbox>
+    <div *ngIf="random">
+        <button class="btn" mat-raised-button color="primary" (click)="takeRandomUser()">Generate</button>
+    </div>
+    <div *ngIf="custom">
+        <div class="grid">
+            <mat-checkbox class="genre" *ngFor="let type of types" [(ngModel)]="type.selected">{{type.name}}</mat-checkbox>
+        </div>    
+        <button class="btn" mat-raised-button color="primary" (click)="takeCustomUser()">Generate</button>
+    </div>
+    <div *ngIf="!custom && !random">
+        <h2>Please select the type of generator</h2>
+    </div>
+</mat-card>
+
+
+<mat-card class="user-card" *ngIf="customUser || randomUser">
+
+    <p>User</p>
+
+    <div *ngIf="randomUser && random">
+        <img class="user-img" src="{{randomUser.picture.large}}" alt="user img">
+        <p>Name: <span class="name">{{randomUser.name.first}} {{randomUser.name.last}}</span></p>
+        <p>Email: {{randomUser.email}}</p>
+        <p>Date of Birth: {{randomUser.dob.date | date}}</p>
+        <p>Age: {{randomUser.dob.age}}</p>
+        <p>Gender: {{randomUser.gender}}</p>
+        <p>Phone: {{randomUser.phone}}</p>
+        <p>Nationality: {{randomUser.nat}}</p>
+        <p>Country: {{randomUser.location.country}}</p>
+        <p>City: {{randomUser.location.city}}</p>
+    </div>
+
+
+    <div *ngIf="customUser && custom">
+        <img *ngIf="customUser?.picture?.large" class="user-img" src="{{customUser.picture.large}}" alt="user img">
+        <p *ngIf="customUser?.name">Name: <span class="name">{{customUser.name.first}} {{customUser.name.last}}</span></p>
+        <p *ngIf="customUser?.email">Email: {{customUser.email}}</p>
+        <p *ngIf="customUser?.dob">Date of Birth: {{customUser.dob.date | date}}</p>
+        <p *ngIf="customUser?.dob">Age: {{customUser.dob.age}}</p>
+        <p *ngIf="customUser?.gender">Gender: {{customUser.gender}}</p>
+        <p *ngIf="customUser?.phone">Phone: {{customUser.phone}}</p>
+        <p *ngIf="customUser?.nat">Nationality: {{customUser.nat}}</p>
+        <p *ngIf="customUser?.location?.country">Country: {{customUser.location.country}}</p>
+        <p *ngIf="customUser?.location?.city">City: {{customUser.location.city}}</p>
+    </div>
+
+    
+
+</mat-card>
+
+
+
+
+
